@@ -6,6 +6,7 @@
 package shopping;
 
 import junit.framework.TestCase;
+import junit.framework.TestSuite;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,7 +18,12 @@ import org.junit.Test;
  * @author william
  */
 public class ShoppingCartTest extends TestCase{
-    
+
+   public static TestSuite suite() {
+        TestSuite suite = new TestSuite(ShoppingCartTest.class);
+        return suite;
+    }
+  
     private ShoppingCart cart1;
     private Product prod1;
     
